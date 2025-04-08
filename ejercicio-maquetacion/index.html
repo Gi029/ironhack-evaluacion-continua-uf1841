@@ -8,35 +8,154 @@
     <style>
         * {
             box-sizing: border-box;
+            font-family:'Times New Roman', Times, serif;
         }
+
+       body{
+            /* border: 1px solid black ; */
+            height: 400px;
+            display: flex;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .cards{
+           /*  border: 1px solid black ; */
+            display: flex;
+            flex: 1;
+        }
+
+         .card_1,
+         #card_2,
+         .card_3{
+           /*  border: 1px solid black ; */
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin-left: 30px;
+            margin-right: 30px;
+            
+        }
+         
+
+         .card_1>div:nth-child(1),
+         .card_3>div:nth-child(1){
+            background-color:black;
+            color: white;
+            text-align: center;
+        }
+
+
+         #card_2>div:nth-child(1){
+            background-color:#6868AC;
+            color: white;
+
+         }
+         .card_1 >div,
+         #card_2 >div,
+         .card_3 >div{
+             border: 0.32px solid, rgb(243, 241, 241);
+             display: flex;
+             flex: 1;
+             justify-content: center;
+        }
+
+        .card_1 >div:nth-child(2),
+        .card_1 >div:nth-child(7),
+        #card_2 >div:nth-child(2),
+        #card_2 >div:nth-child(7),
+        .card_3 >div:nth-child(2),
+        .card_3 >div:nth-child(7){
+             background-color: gainsboro;
+             display: flex;
+             align-items: center;
+
+        }
+
+        .card_1 >div:nth-child(7)>button,
+        #card_2 >div:nth-child(7)>button,
+        .card_3 >div:nth-child(7)>button{
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #6868AC;
+            color: white;
+            border: none;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+
+        .card_1:hover,
+        .card_3:hover{
+            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+        }
+        
+       #card_2:hover{
+            box-shadow: 0 8px 12px 0 rgba(104,104,171,0.8);
+       }
+
+
+
+
+
+
+
+
+
+       @media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .card_1,
+    #card_2,
+    .card_3 {
+        width: 80%; /* Define un ancho específico */
+        margin: 10px 0; /* Espaciado entre tarjetas */
+    }
+}
+
     </style>
 </head>
 
 <body>
-    Básico
-    $ 9.99 / año
-    10GB de Almacenamiento
-    10 Correos Electrónicos
-    10 Dominios
-    1GB de Ancho de Banda
-    Registrarse
+     <div class="cards">
+
+        <div class="card_1">
+            <div><h2> Básico</h1></div>
+            <div><p>$ 9.99 / año</p></div>
+            <div><p>10GB de Almacenamiento</p></div>
+            <div><p>10 Correos Electrónicos</p></div>
+            <div><p>10 Dominios</p></div>
+            <div><p>1GB de Ancho de Banda</p></div>
+            <div><button>Registrarse</button></div>
+        </div> 
+        
+        <div id="card_2">
+           <div><h2 id="card_2_titulo">Pro</h2></div>
+           <div><p>$ 24.99 / año</p></div>
+           <div><p>25GB de Almacenamiento</p></div>
+           <div><p> 25 Correos Electrónicos</p></div>
+           <div><p> 25 Dominios</p></div>
+           <div><p>2GB de Ancho de Banda</p></div>
+           <div> <button> Registrarse</button></div>
+        </div> 
+
+        <div class="card_3">
+            <div><h2> Premium</h2></div>
+            <div><p> $ 49.99 / año</p></div>
+            <div><p> 50GB de Almacenamiento</p></div>
+            <div><p> 50 Correos Electrónicos</p></div>
+            <div> <p> 50 Dominios</p></div>
+            <div><p> 5GB de Ancho de Banda</p></div>
+            <div><button> Registrarse</button></div>
+        </div> 
+     </div>
+ 
     
-    Pro
-    $ 24.99 / año
-    25GB de Almacenamiento
-    25 Correos Electrónicos
-    25 Dominios
-    2GB de Ancho de Banda
-    Registrarse
-    
-    Premium
-    $ 49.99 / año
-    50GB de Almacenamiento
-    50 Correos Electrónicos
-    50 Dominios
-    5GB de Ancho de Banda
-    Registrarse
-</body>
+    </body>
 
 </html>
 
